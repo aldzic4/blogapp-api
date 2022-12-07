@@ -5,7 +5,7 @@ export default class extends BaseSchema {
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
-      table.string('slug').primary()
+      table.string('slug').primary().nullable()
       
       table.string('title')
       table.text('description')
