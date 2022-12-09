@@ -7,6 +7,6 @@ export default class IndexSeeder extends BaseSeeder {
 
   public async run() {
     await this.runSeeder(await import('../Tag'))
-    await this.runSeeder(await import('../BlogPost'))
+    await this.runSeeder(await import('../Post'))
   }
 }

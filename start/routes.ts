@@ -27,11 +27,17 @@ Route.group(()=>{
   }).prefix('tags')
 
   Route.group(()=>{
-    Route.get('/', "BlogPostsController.show")
-    Route.get('/:slug', "BlogPostsController.showById")
-    Route.post('/', "BlogPostsController.create")
-    Route.put('/:slug', "BlogPostsController.update")
-    Route.delete('/:slug', "BlogPostsController.delete")
+    Route.get('/', "PostsController.show")
+    Route.get('/:slug', "PostsController.showById")
+    Route.post('/', "PostsController.create")
+    Route.put('/:slug', "PostsController.update")
+    Route.delete('/:slug', "PostsController.delete")
+
+    Route.get('/:slug/comments', "CommentsController.show")
+    Route.post('/:slug/comments', "CommentsController.create")
+    Route.delete('/:slug/comments/:id', "CommentsController.delete")
   }).prefix('posts')
+
+    
 
 }).prefix('api')

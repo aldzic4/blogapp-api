@@ -4,7 +4,11 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 export default class CreateCommentValidator {
   constructor(protected ctx: HttpContextContract) {}
 
-  public schema = schema.create({})
+  public schema = schema.create({
+    body: schema.string()
+  })
 
-  public messages: CustomMessages = {}
+  public messages: CustomMessages = {
+    
+  }
 }

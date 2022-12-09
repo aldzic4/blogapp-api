@@ -1,10 +1,10 @@
 import BaseSeeder from '@ioc:Adonis/Lucid/Seeder'
-import BlogPost from 'App/Models/BlogPost'
+import Post from 'App/Models/Post'
 
 export default class extends BaseSeeder {
   public async run () {
 
-    await BlogPost.createMany([
+    await Post.createMany([
       {
         slug: "dobra-partija-nurkica-u-sigurnom-trijumfu-portlanda",
         title: "Dobra partija Nurkica u sigurnom trijumfu Portlanda",
