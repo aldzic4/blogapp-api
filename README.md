@@ -1,9 +1,9 @@
 # blogapp-api
 
-need at least the latest release of Node.js v14.__
-clone project locally.__
-npm install;__
-npm init;
+need at least the latest release of Node.js v14 <br />
+clone project locally <br />
+npm install <br />
+npm init <br />
 npm i @adonisjs/lucid;
 node ace configure @adonisjs/lucid;
 add to env.ts:   export default Env.rules({
