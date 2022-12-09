@@ -1,7 +1,7 @@
 # blogapp-api
 
 need at least the latest release of Node.js v14 <br />
-clone project locally <br />
+clone project from development branch <br />
 npm install <br />
 npm init <br />
 npm i @adonisjs/lucid <br />
