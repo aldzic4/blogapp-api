@@ -3,7 +3,7 @@ import { BaseModel, column, HasMany, hasMany, ManyToMany, manyToMany } from '@io
 import Comment from './Comment'
 import Tag from './Tag'
 
-export default class BlogPost extends BaseModel {
+export default class Post extends BaseModel {
   @column({ isPrimary: true })
   public slug: string
 
@@ -26,7 +26,11 @@ export default class BlogPost extends BaseModel {
   public comments: HasMany<typeof Comment>
 
   @manyToMany(() => Tag, {
-    pivotTable: "blog_posts_tags"
+    pivotTable: "post_tag",
+    localKey: "slug",
+    pivotForeignKey: "post_slug",
+    relatedKey: "id",
+    pivotRelatedForeignKey: "tag_id"
   })
   public tags: ManyToMany<typeof Tag>
 }
